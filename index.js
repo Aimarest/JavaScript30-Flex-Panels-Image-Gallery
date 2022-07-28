@@ -1,9 +1,11 @@
-const panels = document.querySelectorAll('.panels');
+const panels = document.querySelectorAll('.panel');
 
 function handleClick(ev){
-const currentPanel = ev.target;
-currentPanel.classList.add('open');
-currentPanel.classList.add('open-active')
+const currentPanel = ev.currentTarget;
+console.log(ev.target)
+console.log(ev.currentTarget)
+currentPanel.classList.toggle('open');
+currentPanel.classList.toggle('open-active')
 }
 for (let i=0; i< panels.length; i++){
     const panel = panels[i];
