@@ -53,8 +53,24 @@ html {
     margin: 0;
     width: 100%;
     transition: transform 0.5s;
+    flex:1 0 auto;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    border:solid red 1px;
   }
-
+  .panel > *:first-child{
+    transform: translateY(-100%)
+  }
+  .panel.open-active > *:first-child{
+    transform: translateY(0);
+  }
+  .panel > *:last-child{
+    transform: translateY(100%);
+  }
+  .panel.open-active > *:last-child{
+    transform: translateY(0);
+  }
   .panel p {
     text-transform: uppercase;
     font-family: 'Amatic SC', cursive;
