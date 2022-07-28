@@ -57,7 +57,7 @@ html {
     display:flex;
     justify-content: center;
     align-items: center;
-    border:solid red 1px;
+    
   }
   .panel > *:first-child{
     transform: translateY(-100%)
@@ -83,5 +83,6 @@ html {
   }
 
   .panel.open {
+    flex:5;
     font-size: 40px;
   }
