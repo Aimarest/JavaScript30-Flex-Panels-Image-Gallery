@@ -5,12 +5,18 @@ function handleClick(ev){
     const openPanel = document.querySelectorAll('.open');
     const currentPanel = ev.currentTarget;
     const listOfOpenPanels = Array.from(openPanel)
-    console.log(listOfOpenPanels)
-    listOfOpenPanels.forEach(panel => panel.classList.remove('open'));
-  
-    currentPanel.classList.toggle('open');
-}
-
+  if( listOfOpenPanels[0] === currentPanel){  
+   currentPanel.classList.remove('open')
+        
+  }else{
+    
+  listOfOpenPanels.forEach( panel => 
+  panel.classList.remove('open'));
+  currentPanel.classList.toggle('open');
+ 
+  }
+ 
+    }
 function handleText(ev){
     const property = ev.propertyName;
     const currentPanel = ev.currentTarget;
