@@ -1,9 +1,14 @@
 const panels = document.querySelectorAll('.panel');
 
-function handleClick(ev){
-const currentPanel = ev.currentTarget;
-currentPanel.classList.toggle('open');
 
+function handleClick(ev){ 
+    const openPanel = document.querySelectorAll('.open');
+    const currentPanel = ev.currentTarget;
+    const listOfOpenPanels = Array.from(openPanel)
+    console.log(listOfOpenPanels)
+    listOfOpenPanels.forEach(panel => panel.classList.remove('open'));
+  
+    currentPanel.classList.toggle('open');
 }
 
 function handleText(ev){
